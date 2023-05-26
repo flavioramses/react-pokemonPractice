@@ -1,6 +1,9 @@
-# Random Pokemon Generator
+<h1 align="center">Random Pokemon Generator</h1>
 
-![Preview](preview.gif)
+<p align="center">
+  <img src="preview.gif" alt="Preview">
+</p>
+
 
 ## What I Learned
 
