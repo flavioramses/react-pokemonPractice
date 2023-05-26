@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Card from "./Card";
+import Cards from "./Cards";
+
+// TAKES A STRING AND REPLACES EVERY "-" WITH AN SPACE
+const spaceUp = (str) => {
+    var string = str.split("-");
+    return string.join(" ");
+};
 
 function App() {
   const [number, setNumber] = useState(null);
@@ -17,18 +23,12 @@ function App() {
       return data;
     }
     async function addPokemon(jay) {
-      const id = jay.id;
-      await setPokeList((pokeList) => {
-        return pokeList.concat({ id, jay });
-      });
+      const {id} = jay;
+      await setPokeList([...pokeList, {id,jay}]);
     }
     fetchApi(Math.round(Math.random() * 400)).then((res) => addPokemon(res));
   }, [number]);
-  const spaceUp = (str) => {
-    var string = str.split("-");
-    if (string.length === 1) return str;
-    return string[0] + " " + string[1];
-  };
+
 
   return (
     <div className="cont">
@@ -39,9 +39,7 @@ function App() {
       >
         ⟳
       </button>
-      <div className="cardsContainer">
-        <Card spaceUp={spaceUp} pokeList={pokeList} />
-      </div>
+      <Cards spaceUp={spaceUp} pokeList={pokeList}  />
     </div>
   );
 }
