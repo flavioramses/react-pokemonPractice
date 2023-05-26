@@ -19,10 +19,10 @@
 
 To get a local copy of the project, follow these steps:
 
-- Clone the repository: git clone `https://github.com/flavioramses/react-pokemonPractice.git`
-- Navigate to the project directory: `cd react-pokemonPractice`
-- Install the dependencies: `npm install`
-- Run the application: `npm start`
-- Open your web browser and visit `http://localhost:3000`
-- Click on the ⟳ button to generate a random Pokemon
-- The Pokemon card with its name and abilities will be displayed on the screen
+1. Clone the repository: git clone `https://github.com/flavioramses/react-pokemonPractice.git`
+2. Navigate to the project directory: `cd react-pokemonPractice`
+3. Install the dependencies: `npm install`
+4. Run the application: `npm start`
+5. Open your web browser and visit `http://localhost:3000`
+6. Click on the ⟳ button to generate a random Pokemon
+7. The Pokemon card with its name and abilities will be displayed on the screen
